@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center {
+            text-align: center;
+            margin-top: 50vh;
+        }
+        a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: chocolate;
+            color: aliceblue;
+            border-radius: 5px;
+        }
+        input{
+            height: 35px;
+            width: 300px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="center">
+    <input type="text" id="clr" placeholder="Enter a color or color hex">
+    <br> <br><a href="#" onclick="changeColor()">change</a>
+
+    <script>
+        function changeColor() {
+            const color = document.getElementById('clr').value
+            document.querySelector('body').setAttribute("bgcolor", color)
+        }
+    </script>
+</body>
+</html>
