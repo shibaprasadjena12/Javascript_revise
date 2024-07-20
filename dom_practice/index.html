@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="password" id="pass" placeholder="Enter your password"> <a id="show_hide" href="#" onclick="toggle()">show</a>
+    </form>
+
+    <script>
+        function toggle()
+        {
+            let f_type = document.getElementById('pass').type
+
+            if (f_type === 'password')
+                {
+                    document.getElementById('pass').type = "text"
+                    document.getElementById('show_hide').innerText = "hide"
+                }
+            else {
+                    document.getElementById('pass').type = "password"
+                    document.getElementById('show_hide').innerText = "show"
+            }
+        }
+    </script>
+</body>
+</html>
