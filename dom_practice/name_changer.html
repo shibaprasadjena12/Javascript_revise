@@ -6,12 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div id="info">
+        <span style="display: none;">Test Text</span>
         <h1>User Information</h1>
         <h3 id="user_name">Shibaprasad Jena</h3>
     </div>
     <hr>
-    
+    <h1 id="inner-text"></h1>
+    <h1 id="text-content"></h1>
+    <h1 id="inner-html"></h1>    
     <form>
         <input type="text" placeholder="Enter your name" id="name_txt"><br>
         <a href="#" onclick="name_change()">Submit</a>
@@ -23,7 +26,23 @@
             let u_name = document.getElementById('name_txt')
 
             title.innerHTML = u_name.value
+
+            title.style.backgroundColor = "yellow"
+            title.style.display = "inline"
+            title.style.padding = "10px"
+            title.style.borderRadius = "10px"
+            u_name.style.height = "30px"
             console.log(title);
+
+            let inf = document.getElementById('info')
+            let inText = document.getElementById('inner-text')
+            let txtContent = document.getElementById('text-content')
+            let inHtm = document.getElementById('inner-html')
+
+            inText.innerHTML = inf.innerText
+            txtContent.innerHTML = inf.textContent
+            inHtm.innerHTML = inf.innerHTML
+
         }
     </script>
 </body>
