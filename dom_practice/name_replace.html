@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Welcome home My Love <span id="lover-name">(Enter your lover's name)</span></h1> 
+    </div>
+    <div id="center">
+        <form>
+            <input type="text" name="" id="l-name" placeholder="Enter your lover's name"> <blockquote></blockquote>
+            <a href="#" onclick="update_all()"> Change </a>
+        </form>
+    </div>
+    <div id="footer">
+        <p>
+            This page is specially designed for my Love <span id="lover-name">(your lover name)</span>
+        </p>
+    </div>
+
+    <script>
+
+        function update_all() {
+            let love_name = document.querySelectorAll('#lover-name')
+            let text_data = document.getElementById('l-name')
+
+            console.log(love_name);
+            console.log(text_data);
+            love_name.forEach((element) => {
+                return element.innerText = text_data.value
+            });
+        }
+
+    </script>
+</body>
+</html>
