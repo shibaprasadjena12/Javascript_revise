@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>User Information</h1>
+        <h3 id="user_name">Shibaprasad Jena</h3>
+    </div>
+    <hr>
+    
+    <form>
+        <input type="text" placeholder="Enter your name" id="name_txt"><br>
+        <a href="#" onclick="name_change()">Submit</a>
+    </form>
+
+    <script>
+        function name_change() {
+            let title = document.getElementById('user_name')
+            let u_name = document.getElementById('name_txt')
+
+            title.innerHTML = u_name.value
+            console.log(title);
+        }
+    </script>
+</body>
+</html>
