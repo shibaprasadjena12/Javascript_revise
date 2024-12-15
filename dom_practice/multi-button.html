@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const arr1 = ["Jeena","Chiku","Pinku","Lona"]
+    const col = ["Red","green","blue","cyan"]
+
+    arr1.forEach((item , index) => multiButton(item, col[index]))
+    function multiButton(name, color){
+        const btn = document.createElement("button");
+        btn.innerText = `${name}`
+        btn.style.backgroundColor = `${color}`
+        btn.style.padding = "12px"
+        btn.style.borderRadius = "12px"
+        document.body.appendChild(btn)
+        console.log(btn);
+        
+    }
+</script>
+</html>
